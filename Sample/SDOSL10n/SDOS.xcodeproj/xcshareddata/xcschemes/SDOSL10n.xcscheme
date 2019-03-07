@@ -90,10 +90,6 @@
             argument = "-o ${PROJECT_DIR}/Example/LocalizableStrings"
             isEnabled = "YES">
          </CommandLineArgument>
-         <CommandLineArgument
-            argument = "-forceBundleName &quot;SDOSTest&quot;"
-            isEnabled = "NO">
-         </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>

@@ -1,9 +1,9 @@
-//  FICHERO AUTOGENERADO - NO MODIFICAR
+//  This is a generated file, do not edit!
 //  TEST_LocalizableGenerate.strings
 //
 //  Created by SDOS
 //
-//  Generate 1036 keys
+//  Generate 1040 keys
 
 "facebook_app_id" = "130537374236044";
 "appsflyer_dev_key" = "EFgBMU4p5xU5cwTdw68wzm";
@@ -998,22 +998,22 @@
 "new_card_association_popup_conditions" = "Para poder asociar la tarjeta debes aceptar las Condiciones Legales.";
 "welcome_login_remember_credentials" = "Recuerda mis datos";
 "welcome_login_password_error" = "Escribe tu contraseña";
-"welcome_login_email_error" = "Introduce tu email";
 "create_account_card_question" = "¿Tienes tarjeta de ClubDIA?";
 "register_legal_privacity_security_notice" = "Acepto la 
     <![CDATA[<font color=\"#ff2f1f\"><u><b>Política de Privacidad y Seguridad. *</b></u> </font>]]>";
 "register_form_adult" = "Soy mayor de edad <![CDATA[<font color=\"#ff2f1f\"><b>*</b> </font>]]>";
-"welcome_login_repeat_password_error" = "Repite tu contraseña";
 "welcome_login_repeat_password_title" = "Repite contraseña";
 "welcome_login_conditions_title" = "Condiciones de uso";
 "myshopping_tickets_not_available" = "Lo sentimos, ha habido un error y no podemos mostrar tus tickets en este momento. Vuelve a intentarlo más tarde.";
-"register_error_password_lower_8" = "Introduce una contraseña mayor de 8 caracteres";
 "register_error_password_empty_spaces" = "La contraseña no debe contener espacios";
 "new_card_assosiation_success_asociate_titular_title" = "¡Enhorabuena!";
 "new_card_assosiation_success_asociate_titular_description" = "Ya tienes tu tarjeta asociada y tus cupones digitales disponibles. Ahora, ya no tendrás que esperar a que se impriman en tienda y podrás ahorrar como nunca.";
 "register_user_without_card" = "No hemos encontrado  una tarjeta ClubDIA en esta cuenta.";
 "new_card_assosiation_success_asociate_titular_text" = "Ya tienes tu tarjeta asociada y tus cupones digitales disponibles. Ahora, ya no tendrás que esperar a que se impriman en tienda y podrás ahorrar como nunca.";
 "register_user_without_card_use_mycard" = "Usar mi tarjeta ClubDIA";
+"register_error_password_lower_8" = "Introduce una contraseña de 8 o más caracteres.";
+"welcome_login_repeat_password_error" = "Repite tu contraseña.";
+"welcome_login_email_error" = "Introduce tu email.";
 "register_user_without_card_create_mycard" = "Crear una nueva tarjeta digital";
 "register_message_action_5" = "Al crear tu cuenta, te pasaremos a cupones digitales para que puedas disfrutar de todas las ventajas de ClubDIA y de cupones exclusivos.";
 "register_message_action_6" = "Al crear tu cuenta, te crearemos una tarjeta digital con cupones digitales y podrás disfrutar de todas las ventajas del ClubDIA.";
@@ -1044,4 +1044,8 @@
 "global_thanks" = "¡Gracias!";
 "new_register_screen_title" = "Crea tu cuenta";
 "new_register_email_textfield_label" = "Email";
-"new_register_input_password_text" = "Introduce tu contraseña";
+"new_register_input_password_text" = "Contraseña de 8 o más caracteres";
+"register_error_password_not_equal" = "Las contraseñas no coinciden.";
+"register_error_card_not_valid" = "Introduce un número de tarjeta válido.";
+"register_error_conditions_not_checked" = "Debes aceptar las condiciones legales obligatorias.";
+"register_error_document_not_valid" = "Introduce un número de documento válido.";

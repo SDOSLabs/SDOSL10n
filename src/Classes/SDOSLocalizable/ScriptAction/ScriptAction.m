@@ -367,7 +367,7 @@
 
 - (NSMutableString *) generateHeaderStringFile:(NSArray *) arrayConstants{
     NSMutableString *stringOutput = [NSMutableString new];
-    [stringOutput appendString:@"//  FICHERO AUTOGENERADO - NO MODIFICAR\n"];
+    [stringOutput appendString:@"//  This is a generated file, do not edit!\n"];
     [stringOutput appendFormat:@"//  %@\n", [self stringFileName]];
     [stringOutput appendString:@"//\n"];
     [stringOutput appendString:@"//  Created by SDOS\n"];
