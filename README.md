@@ -1,1 +1,3 @@
-SDOSL10n
+# SDOSL10n
+
+Esta librería está documentada en https://kc.sdos.es/x/YALLAQ
