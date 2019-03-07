@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1C077AE1E7BE32B00789B22"
-               BuildableName = "SDOSLocalizable"
-               BlueprintName = "SDOSLocalizable"
+               BuildableName = "SDOSL10n"
+               BlueprintName = "SDOSL10n"
                ReferencedContainer = "container:SDOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1C077AE1E7BE32B00789B22"
-            BuildableName = "SDOSLocalizable"
-            BlueprintName = "SDOSLocalizable"
+            BuildableName = "SDOSL10n"
+            BlueprintName = "SDOSL10n"
             ReferencedContainer = "container:SDOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1C077AE1E7BE32B00789B22"
-            BuildableName = "SDOSLocalizable"
-            BlueprintName = "SDOSLocalizable"
+            BuildableName = "SDOSL10n"
+            BlueprintName = "SDOSL10n"
             ReferencedContainer = "container:SDOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -109,8 +109,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1C077AE1E7BE32B00789B22"
-            BuildableName = "SDOSLocalizable"
-            BlueprintName = "SDOSLocalizable"
+            BuildableName = "SDOSL10n"
+            BlueprintName = "SDOSL10n"
             ReferencedContainer = "container:SDOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

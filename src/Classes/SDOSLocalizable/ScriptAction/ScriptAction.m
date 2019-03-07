@@ -340,7 +340,7 @@
 }
 
 - (void) generateFileStringWithConstants:(NSArray *) arrayConstants locale:(NSString *) locale {
-    NSMutableString *stringInterfaceOutput = [self generateHeaderStringFile];
+    NSMutableString *stringInterfaceOutput = [self generateHeaderStringFile:arrayConstants];
     
     for (NSString *constantLocalizable in arrayConstants) {
         [stringInterfaceOutput appendFormat:@"%@\n", constantLocalizable];
@@ -365,13 +365,14 @@
     printf("\n");
 }
 
-- (NSMutableString *) generateHeaderStringFile {
+- (NSMutableString *) generateHeaderStringFile:(NSArray *) arrayConstants{
     NSMutableString *stringOutput = [NSMutableString new];
     [stringOutput appendString:@"//  FICHERO AUTOGENERADO - NO MODIFICAR\n"];
     [stringOutput appendFormat:@"//  %@\n", [self stringFileName]];
     [stringOutput appendString:@"//\n"];
     [stringOutput appendString:@"//  Created by SDOS\n"];
     [stringOutput appendString:@"//\n"];
+    [stringOutput appendFormat:@"//  Generate %@ keys\n", @(arrayConstants.count)];
     [stringOutput appendString:@"\n"];
     
     return stringOutput;

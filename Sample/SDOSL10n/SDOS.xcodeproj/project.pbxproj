@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B10BF5861E4A25B100CE42F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1ABC1811E487AE5005C5F91 /* Foundation.framework */; };
-		B1ABC1821E487AE5005C5F91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1ABC1811E487AE5005C5F91 /* Foundation.framework */; };
 		B1C077D41E7BE3E700789B22 /* ConsoleParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077CA1E7BE3E700789B22 /* ConsoleParameter.m */; };
 		B1C077D51E7BE3E700789B22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077CD1E7BE3E700789B22 /* main.m */; };
 		B1C077D61E7BE3E700789B22 /* ScriptAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077D01E7BE3E700789B22 /* ScriptAction.m */; };
@@ -17,42 +15,7 @@
 		B1C077DF1E7C0A4700789B22 /* LanguageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077DE1E7C0A4700789B22 /* LanguageObject.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B1C8A86520ECA3050042128E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1ABC1651E487827005C5F91 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1C077AE1E7BE32B00789B22;
-			remoteInfo = SDOSLocalizable;
-		};
-		B1C8A86720ECA3090042128E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1ABC1651E487827005C5F91 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1ABC16C1E487827005C5F91;
-			remoteInfo = ImagesConstants;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		B10BF55B1E4A1CAD00CE42F3 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-		B1ABC16B1E487827005C5F91 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		B1C077AD1E7BE32B00789B22 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,10 +42,8 @@
 		5CEE69D7204FF759008A3EDC /* Test.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Test.xcassets; sourceTree = "<group>"; };
 		5CEE69D8204FF759008A3EDC /* default.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = default.bundle; sourceTree = "<group>"; };
 		5CEE69DA204FF759008A3EDC /* ImagesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesConstants.h; sourceTree = "<group>"; };
-		B10BF55D1E4A1CAD00CE42F3 /* SDOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDOS; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1ABC16D1E487827005C5F91 /* ImagesConstants */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ImagesConstants; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1ABC1811E487AE5005C5F91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B1C077AF1E7BE32B00789B22 /* SDOSLocalizable */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDOSLocalizable; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C077AF1E7BE32B00789B22 /* SDOSL10n */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDOSL10n; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C077C91E7BE3E700789B22 /* ConsoleParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleParameter.h; sourceTree = "<group>"; };
 		B1C077CA1E7BE3E700789B22 /* ConsoleParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleParameter.m; sourceTree = "<group>"; };
 		B1C077CC1E7BE3E700789B22 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -98,22 +59,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B10BF55A1E4A1CAD00CE42F3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B10BF5861E4A25B100CE42F3 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1ABC16A1E487827005C5F91 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1ABC1821E487AE5005C5F91 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B1C077AC1E7BE32B00789B22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,9 +122,7 @@
 		B1ABC16E1E487827005C5F91 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1ABC16D1E487827005C5F91 /* ImagesConstants */,
-				B10BF55D1E4A1CAD00CE42F3 /* SDOS */,
-				B1C077AF1E7BE32B00789B22 /* SDOSLocalizable */,
+				B1C077AF1E7BE32B00789B22 /* SDOSL10n */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,47 +206,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B10BF55C1E4A1CAD00CE42F3 /* SDOS */ = {
+		B1C077AE1E7BE32B00789B22 /* SDOSL10n */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B10BF5631E4A1CAD00CE42F3 /* Build configuration list for PBXNativeTarget "SDOS" */;
-			buildPhases = (
-				5C42F66A205FD819000EBF45 /* ShellScript */,
-				B10BF5591E4A1CAD00CE42F3 /* Sources */,
-				B10BF55A1E4A1CAD00CE42F3 /* Frameworks */,
-				B10BF55B1E4A1CAD00CE42F3 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B1C8A86820ECA3090042128E /* PBXTargetDependency */,
-				B1C8A86620ECA3050042128E /* PBXTargetDependency */,
-			);
-			name = SDOS;
-			productName = SDOS;
-			productReference = B10BF55D1E4A1CAD00CE42F3 /* SDOS */;
-			productType = "com.apple.product-type.tool";
-		};
-		B1ABC16C1E487827005C5F91 /* ImagesConstants */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B1ABC1741E487827005C5F91 /* Build configuration list for PBXNativeTarget "ImagesConstants" */;
-			buildPhases = (
-				5C42F669205FD372000EBF45 /* ShellScript */,
-				B1ABC1691E487827005C5F91 /* Sources */,
-				B1ABC16A1E487827005C5F91 /* Frameworks */,
-				B1ABC16B1E487827005C5F91 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ImagesConstants;
-			productName = ImageConstants;
-			productReference = B1ABC16D1E487827005C5F91 /* ImagesConstants */;
-			productType = "com.apple.product-type.tool";
-		};
-		B1C077AE1E7BE32B00789B22 /* SDOSLocalizable */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B1C077B31E7BE32B00789B22 /* Build configuration list for PBXNativeTarget "SDOSLocalizable" */;
+			buildConfigurationList = B1C077B31E7BE32B00789B22 /* Build configuration list for PBXNativeTarget "SDOSL10n" */;
 			buildPhases = (
 				5C42F66B205FD99E000EBF45 /* ShellScript */,
 				B1C077AB1E7BE32B00789B22 /* Sources */,
@@ -314,9 +219,9 @@
 			);
 			dependencies = (
 			);
-			name = SDOSLocalizable;
+			name = SDOSL10n;
 			productName = SDOSLocalizable;
-			productReference = B1C077AF1E7BE32B00789B22 /* SDOSLocalizable */;
+			productReference = B1C077AF1E7BE32B00789B22 /* SDOSL10n */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -328,16 +233,6 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Rafael Fernandez Alvarez";
 				TargetAttributes = {
-					B10BF55C1E4A1CAD00CE42F3 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = FR53QH8ZBJ;
-						ProvisioningStyle = Automatic;
-					};
-					B1ABC16C1E487827005C5F91 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = FR53QH8ZBJ;
-						ProvisioningStyle = Automatic;
-					};
 					B1C077AE1E7BE32B00789B22 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FR53QH8ZBJ;
@@ -359,40 +254,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1ABC16C1E487827005C5F91 /* ImagesConstants */,
-				B10BF55C1E4A1CAD00CE42F3 /* SDOS */,
-				B1C077AE1E7BE32B00789B22 /* SDOSLocalizable */,
+				B1C077AE1E7BE32B00789B22 /* SDOSL10n */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5C42F669205FD372000EBF45 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "rm -rf ${PROJECT_DIR}/../../src/Scripts/${PRODUCT_NAME}";
-		};
-		5C42F66A205FD819000EBF45 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "rm -rf ${PROJECT_DIR}/../../src/Scripts/${PRODUCT_NAME}";
-		};
 		5C42F66B205FD99E000EBF45 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,20 +276,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B10BF5591E4A1CAD00CE42F3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1ABC1691E487827005C5F91 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B1C077AB1E7BE32B00789B22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,19 +290,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B1C8A86620ECA3050042128E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1C077AE1E7BE32B00789B22 /* SDOSLocalizable */;
-			targetProxy = B1C8A86520ECA3050042128E /* PBXContainerItemProxy */;
-		};
-		B1C8A86820ECA3090042128E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1ABC16C1E487827005C5F91 /* ImagesConstants */;
-			targetProxy = B1C8A86720ECA3090042128E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5CEE69CA204FF732008A3EDC /* Localizable.strings */ = {
@@ -485,22 +325,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B10BF5611E4A1CAD00CE42F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = FR53QH8ZBJ;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B10BF5621E4A1CAD00CE42F3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = FR53QH8ZBJ;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		B1ABC1721E487827005C5F91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -590,22 +414,6 @@
 			};
 			name = Release;
 		};
-		B1ABC1751E487827005C5F91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = FR53QH8ZBJ;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B1ABC1761E487827005C5F91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = FR53QH8ZBJ;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		B1C077B41E7BE32B00789B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -627,15 +435,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B10BF5631E4A1CAD00CE42F3 /* Build configuration list for PBXNativeTarget "SDOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B10BF5611E4A1CAD00CE42F3 /* Debug */,
-				B10BF5621E4A1CAD00CE42F3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B1ABC1681E487827005C5F91 /* Build configuration list for PBXProject "SDOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -645,16 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1ABC1741E487827005C5F91 /* Build configuration list for PBXNativeTarget "ImagesConstants" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B1ABC1751E487827005C5F91 /* Debug */,
-				B1ABC1761E487827005C5F91 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B1C077B31E7BE32B00789B22 /* Build configuration list for PBXNativeTarget "SDOSLocalizable" */ = {
+		B1C077B31E7BE32B00789B22 /* Build configuration list for PBXNativeTarget "SDOSL10n" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1C077B41E7BE32B00789B22 /* Debug */,
