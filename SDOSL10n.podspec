@@ -1,7 +1,7 @@
 @version = "0.9.0"
 Pod::Spec.new do |spec|
   spec.platform     = :ios, '9.0'
-  spec.name         = 'SDOS'
+  spec.name         = 'SDOSL10n'
   spec.authors      = 'SDOS'
   spec.version      = @version
   spec.license      = { :type => 'SDOS License' }
