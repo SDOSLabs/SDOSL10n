@@ -1,3 +1,3 @@
-# SDOS
+# SDOSL10n
 
-Esta librería está documentada en https://kc.sdos.es/x/BQBm
+Esta librería está documentada en https://kc.sdos.es/x/YALLAQ
