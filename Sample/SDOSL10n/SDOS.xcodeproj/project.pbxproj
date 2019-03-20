@@ -28,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		292A749622427FA200F43CAE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/TEST_LocalizableGenerate.strings; sourceTree = "<group>"; };
 		5CEE69C9204FF732008A3EDC /* LocalizableConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizableConstants.h; sourceTree = "<group>"; };
 		5CEE69CB204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5CEE69CD204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -69,6 +70,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		292A749322427FA200F43CAE /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				292A749422427FA200F43CAE /* LocalizableStrings */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		292A749422427FA200F43CAE /* LocalizableStrings */ = {
+			isa = PBXGroup;
+			children = (
+				292A749522427FA200F43CAE /* TEST_LocalizableGenerate.strings */,
+			);
+			path = LocalizableStrings;
+			sourceTree = "<group>";
+		};
 		5CEE69BF204FF6AA008A3EDC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +129,7 @@
 		B1ABC1641E487827005C5F91 = {
 			isa = PBXGroup;
 			children = (
+				292A749322427FA200F43CAE /* Example */,
 				B1C077C71E7BE3E700789B22 /* SDOSLocalizable */,
 				5CEE69BF204FF6AA008A3EDC /* Resources */,
 				B1ABC16E1E487827005C5F91 /* Products */,
@@ -292,6 +310,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		292A749522427FA200F43CAE /* TEST_LocalizableGenerate.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				292A749622427FA200F43CAE /* es */,
+			);
+			name = TEST_LocalizableGenerate.strings;
+			sourceTree = "<group>";
+		};
 		5CEE69CA204FF732008A3EDC /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -314,6 +314,7 @@
                 } else {
                     locale = [[language valueForKey:@"locale"] stringByReplacingOccurrencesOfString:@"_" withString:@"-"];
                 }
+                [constants sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
                 [self generateFileStringWithConstants:constants locale:locale];
             }
         }
