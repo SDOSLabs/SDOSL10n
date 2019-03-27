@@ -260,6 +260,7 @@
            "-output-file-name Nombre del fichero generado\n"
            "--disable-input-output-files-validation Deshabilita la validación de los inputs y outputs files. Usar sólo para dar compatibilidad a Legacy Build System\n"
            "--unlock-files Indica que los ficheros de salida no se deben bloquear en el sistema\n\n", [DEFAULT_LOCALIZABLE_ENDPOINT UTF8String], [CUSTOM_REG_EX_SEPARATOR UTF8String]);
+    exit(1);
 }
 
 #pragma mark - BL

@@ -32,6 +32,8 @@
 		29D10362224B653200B787BF /* SDOSL10n-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDOSL10n-Bridging-Header.h"; sourceTree = "<group>"; };
 		29D10363224B653200B787BF /* ScriptActionSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptActionSwift.swift; sourceTree = "<group>"; };
 		29D10366224B75AB00B787BF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableGenerated.strings; sourceTree = "<group>"; };
+		29D10369224B840A00B787BF /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
+		29D1036A224B840A00B787BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		5CEE69C9204FF732008A3EDC /* LocalizableConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizableConstants.h; sourceTree = "<group>"; };
 		5CEE69CB204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5CEE69CD204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -132,6 +134,8 @@
 		B1ABC1641E487827005C5F91 = {
 			isa = PBXGroup;
 			children = (
+				29D10369224B840A00B787BF /* CHANGELOG.md */,
+				29D1036A224B840A00B787BF /* README.md */,
 				292A749322427FA200F43CAE /* Example */,
 				B1C077C71E7BE3E700789B22 /* SDOSLocalizable */,
 				5CEE69BF204FF6AA008A3EDC /* Resources */,

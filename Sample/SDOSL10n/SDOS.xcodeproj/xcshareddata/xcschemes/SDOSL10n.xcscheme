@@ -121,7 +121,7 @@
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "TMP_DIR"
+            key = "TEMP_DIR"
             value = "${PROJECT_DIR}"
             isEnabled = "YES">
          </EnvironmentVariable>

@@ -33,7 +33,7 @@ extension ScriptActionSwift {
         guard !disableInputOutputFilesValidation else {
             return
         }
-        if let tmpDir = ProcessInfo.processInfo.environment["TMP_DIR"] {
+        if let tmpDir = ProcessInfo.processInfo.environment["TEMP_DIR"] {
             checkInput(params: parseParams(type: .INPUT), sources: ["\(tmpDir)/SDOSL10n-lastrun"])
         }
         checkOutput(params: parseParams(type: .OUTPUT), sources: [output])
@@ -54,14 +54,26 @@ extension ScriptActionSwift {
     }
     
     func checkInput(params: [String], sources: [String]) {
-        checkInputOutput(params: params, sources: sources, message: "Build phase Intput Files does not contain")
+        checkInput(params: params, sources: sources, message: "Build phase Intput Files does not contain")
     }
     
     func checkOutput(params: [String], sources: [String]) {
-        checkInputOutput(params: params, sources: sources, message: "Build phase Output Files does not contain")
+        checkOutput(params: params, sources: sources, message: "Build phase Output Files does not contain")
     }
     
-    func checkInputOutput(params: [String], sources: [String], message: String) {
+    func checkInput(params: [String], sources: [String], message: String) {
+        if let tmpDir = ProcessInfo.processInfo.environment["TEMP_DIR"] {
+            for source in sources {
+                if !params.contains(source) {
+                    print("[SDOSEnvironment] - \(message) '\(source.replacingOccurrences(of: tmpDir, with: "${TEMP_DIR}"))'.")
+                    exit(7)
+                }
+            }
+        }
+        
+    }
+    
+    func checkOutput(params: [String], sources: [String], message: String) {
         for source in sources {
             if !params.contains(source) {
                 print("[SDOSEnvironment] - \(message) '\(source.replacingOccurrences(of: pwd, with: "${SRCROOT}"))'.")
@@ -84,7 +96,7 @@ extension ScriptActionSwift {
     }
     
     @objc func createTempFile() {
-        if let tmpDir = ProcessInfo.processInfo.environment["TMP_DIR"] {
+        if let tmpDir = ProcessInfo.processInfo.environment["TEMP_DIR"] {
             shell("-c", "date > \(tmpDir)/SDOSL10n-lastrun")
         }
     }
