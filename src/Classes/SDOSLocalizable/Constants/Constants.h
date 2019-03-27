@@ -14,14 +14,6 @@
 #define DEFAULT_LOCALIZABLE_ENDPOINT @"https://l10n.sdos.es/api/v1/m"
 #define DEFAULT_LOCALIZABLE_ACCES_TOKEN @"QHoSnxu"
 
-#define GENERATE_FUNCTION @"#define LS_%@ LSFromBundleAndTable(@\"%@\", nil, @\"%@\")"
-#define GENERATE_FUNCTION_WITH_BUNDLE @"#define LS_%@ LSFromBundleAndTable(@\"%@\", @\"%@\", @\"%@\")"
-
-#define INTERFACE_FILENAME @"LocalizableConstants.h"
-#define STRING_FILENAME @"LocalizableGenerate.strings"
-#define IMPLEMENTATION_FILENAME @"LocalizableConstants.m"
-#define CLASS_IMPLEMENTATION_NAME @"LocalizableConstants"
-
 #define PREFIX_LOCALIZABLE @"LS_"
 
 #define GENERATE_ERROR_MESSAGE @"error: El lenguaje \"%@\" no contiene la clave \"%@\" en el fichero \"%@\""
