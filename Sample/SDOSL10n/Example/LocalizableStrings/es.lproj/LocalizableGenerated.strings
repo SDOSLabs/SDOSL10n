@@ -1,0 +1,10 @@
+//  This is a generated file, do not edit!
+//  LocalizableGenerated.strings
+//
+//  Created by SDOS
+//
+//  Generate 3 keys
+
+"key_characters" = "áéíóú !\"·$%&/()=?¿*^Ç¨_:;ñ";
+"key_new_line" = "antes\r\ndespués";
+"key_params" = "Del %@ al %@";

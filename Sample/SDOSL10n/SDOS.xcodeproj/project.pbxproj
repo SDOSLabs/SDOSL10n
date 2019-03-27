@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29D10364224B653200B787BF /* ScriptActionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D10363224B653200B787BF /* ScriptActionSwift.swift */; };
 		B1C077D41E7BE3E700789B22 /* ConsoleParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077CA1E7BE3E700789B22 /* ConsoleParameter.m */; };
 		B1C077D51E7BE3E700789B22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077CD1E7BE3E700789B22 /* main.m */; };
 		B1C077D61E7BE3E700789B22 /* ScriptAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077D01E7BE3E700789B22 /* ScriptAction.m */; };
@@ -28,7 +29,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		292A749622427FA200F43CAE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/TEST_LocalizableGenerate.strings; sourceTree = "<group>"; };
+		29D10362224B653200B787BF /* SDOSL10n-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDOSL10n-Bridging-Header.h"; sourceTree = "<group>"; };
+		29D10363224B653200B787BF /* ScriptActionSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptActionSwift.swift; sourceTree = "<group>"; };
+		29D10366224B75AB00B787BF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableGenerated.strings; sourceTree = "<group>"; };
 		5CEE69C9204FF732008A3EDC /* LocalizableConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizableConstants.h; sourceTree = "<group>"; };
 		5CEE69CB204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5CEE69CD204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -81,7 +84,7 @@
 		292A749422427FA200F43CAE /* LocalizableStrings */ = {
 			isa = PBXGroup;
 			children = (
-				292A749522427FA200F43CAE /* TEST_LocalizableGenerate.strings */,
+				29D10365224B75AB00B787BF /* LocalizableGenerated.strings */,
 			);
 			path = LocalizableStrings;
 			sourceTree = "<group>";
@@ -190,6 +193,8 @@
 				B1C077D91E7C0A2E00789B22 /* LanguageObject */,
 				B1C077CF1E7BE3E700789B22 /* ScriptAction.h */,
 				B1C077D01E7BE3E700789B22 /* ScriptAction.m */,
+				29D10363224B653200B787BF /* ScriptActionSwift.swift */,
+				29D10362224B653200B787BF /* SDOSL10n-Bridging-Header.h */,
 			);
 			path = ScriptAction;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 					B1C077AE1E7BE32B00789B22 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FR53QH8ZBJ;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -263,6 +269,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				es,
 				ca,
@@ -303,6 +310,7 @@
 				B1C077D61E7BE3E700789B22 /* ScriptAction.m in Sources */,
 				B1C077D71E7BE3E700789B22 /* Util.m in Sources */,
 				B1C077DF1E7C0A4700789B22 /* LanguageObject.m in Sources */,
+				29D10364224B653200B787BF /* ScriptActionSwift.swift in Sources */,
 				B1C077DC1E7C0A3C00789B22 /* LanguageCollectionObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,12 +318,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		292A749522427FA200F43CAE /* TEST_LocalizableGenerate.strings */ = {
+		29D10365224B75AB00B787BF /* LocalizableGenerated.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				292A749622427FA200F43CAE /* es */,
+				29D10366224B75AB00B787BF /* es */,
 			);
-			name = TEST_LocalizableGenerate.strings;
+			name = LocalizableGenerated.strings;
 			sourceTree = "<group>";
 		};
 		5CEE69CA204FF732008A3EDC /* Localizable.strings */ = {
@@ -443,18 +451,27 @@
 		B1C077B41E7BE32B00789B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = FR53QH8ZBJ;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		B1C077B51E7BE32B00789B22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = FR53QH8ZBJ;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

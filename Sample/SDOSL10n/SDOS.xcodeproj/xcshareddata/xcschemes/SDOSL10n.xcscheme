@@ -64,14 +64,14 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-cloudCustomRegEx &quot;\\{[^\\{\\}\\s]+\\}&quot;"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "-prefix TEST_"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-cloudAccesToken QGTlFuT"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-output-file-name LocalizableGenerated.strings"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -83,14 +83,49 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-cloudBundleKey 3Fcbc0"
+            argument = "-cloudBundleKey 8NhKJc"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-o ${PROJECT_DIR}/Example/LocalizableStrings"
+            argument = "-output-directory ${PROJECT_DIR}/Example/LocalizableStrings"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--disable-input-output-files-validation"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--unlock-files"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "SCRIPT_INPUT_FILE_COUNT"
+            value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCRIPT_INPUT_FILE_0"
+            value = "${PROJECT_DIR}/SDOSL10n-lastrun"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCRIPT_OUTPUT_FILE_COUNT"
+            value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCRIPT_OUTPUT_FILE_0"
+            value = "${PROJECT_DIR}/Example/LocalizableStrings/es.lproj/LocalizableGenerated.strings"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "TMP_DIR"
+            value = "${PROJECT_DIR}"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
