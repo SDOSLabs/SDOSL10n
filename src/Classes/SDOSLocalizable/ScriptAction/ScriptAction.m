@@ -13,18 +13,24 @@
 #import "./LanguageObject/LanguageObject.h"
 #import "./LanguageCollectionObject/LanguageCollectionObject.h"
 
+#import "SDOSL10n-Swift.h"
+
 @interface ScriptAction()
 
 @property (nonatomic, strong) NSMutableArray *arrayParameters;
 
+@property (nonatomic, strong) ScriptActionSwift *scriptActionSwift;
 @property (nonatomic, copy) NSString *pwd;
 @property (nonatomic, copy) NSString *outputLocalizableDirectory;
+@property (nonatomic, copy) NSString *fileName;
 @property (nonatomic, copy) NSString *cloudBundleKey;
 @property (nonatomic, copy) NSString *cloudVersion;
 @property (nonatomic, copy) NSString *cloudAccesToken;
 @property (nonatomic, copy) NSString *cloudEndpoint;
 @property (nonatomic, copy) NSArray *cloudCustomRegEx;
-@property (nonatomic, copy) NSString *prefixName;
+@property (nonatomic, assign) BOOL disableInputOutputFilesValidation;
+@property (nonatomic, assign) BOOL unlockFiles;
+
 
 @end
 
@@ -60,7 +66,7 @@
 	[self.arrayParameters addObject:consoleParameter3];
     
     ConsoleParameter *consoleParameter5 = [[ConsoleParameter alloc] init];
-    consoleParameter5.option = @"-o";
+    consoleParameter5.option = @"-output-directory";
     consoleParameter5.numArgs = 1;
     [consoleParameter5 setActionExecute:^BOOL (ConsoleParameter *consoleParameter, NSArray *values){
         NSString *result = values[1];
@@ -113,11 +119,11 @@
     [self.arrayParameters addObject:consoleParameter9];
     
     ConsoleParameter *consoleParameter10 = [[ConsoleParameter alloc] init];
-    consoleParameter10.option = @"-prefix";
+    consoleParameter10.option = @"-output-file-name";
     consoleParameter10.numArgs = 1;
     [consoleParameter10 setActionExecute:^BOOL (ConsoleParameter *consoleParameter, NSArray *values){
         NSString *result = values[1];
-        self.prefixName = result;
+        self.fileName = result;
         return true;
     }];
     [self.arrayParameters addObject:consoleParameter10];
@@ -131,6 +137,24 @@
         return true;
     }];
     [self.arrayParameters addObject:consoleParameter12];
+    
+    ConsoleParameter *consoleParameter13 = [[ConsoleParameter alloc] init];
+    consoleParameter13.option = @"--disable-input-output-files-validation";
+    consoleParameter13.numArgs = 0;
+    [consoleParameter13 setActionExecute:^BOOL (ConsoleParameter *consoleParameter, NSArray *values){
+        self.disableInputOutputFilesValidation = true;
+        return true;
+    }];
+    [self.arrayParameters addObject:consoleParameter13];
+    
+    ConsoleParameter *consoleParameter14 = [[ConsoleParameter alloc] init];
+    consoleParameter14.option = @"--unlock-files";
+    consoleParameter14.numArgs = 0;
+    [consoleParameter14 setActionExecute:^BOOL (ConsoleParameter *consoleParameter, NSArray *values){
+        self.unlockFiles = true;
+        return true;
+    }];
+    [self.arrayParameters addObject:consoleParameter14];
 }
 
 - (ConsoleParameter *) consoleParameterWithOption:(NSString *) option {
@@ -151,7 +175,8 @@
     self.cloudCustomRegEx = nil;
     self.cloudAccesToken = DEFAULT_LOCALIZABLE_ACCES_TOKEN;
     self.cloudEndpoint = DEFAULT_LOCALIZABLE_ENDPOINT;
-    self.prefixName = nil;
+    self.unlockFiles = false;
+    self.disableInputOutputFilesValidation = false;
 }
 
 #pragma mark - Load
@@ -226,19 +251,24 @@
 - (void)printUsage
 {
 	printf("Los valores válidos son los siguientes:\n");
-	printf("-o directorio de salida para el fichero localizableGenerate.strings generado\n"
+	printf("-output-directory directorio de salida para el fichero localizableGenerate.strings generado\n"
            "-cloudBundleKey key de la aplicación cloud para descargar los ficheros\n"
            "-cloudVersion versión de la aplicación cloud para descargar los ficheros\n"
            "-cloudAccesToken acces token de la aplicación cloud para descargar los ficheros (por defecto el de SDOS)\n"
            "-cloudEndpoint endpoint de la aplicación cloud para descargar los ficheros (por defecto: %s)\n"
            "-cloudCustomRegEx listado de expresiones regulares separados por (%s). No pueden contener espacios. El caracter \\ se representa con \\\\ (Ejemplo \\\\{[^\\\\{\\\\}\\\\s]+\\\\})\n"
-           "-prefix Prefijo de los ficheros generados\n\n", [DEFAULT_LOCALIZABLE_ENDPOINT UTF8String], [CUSTOM_REG_EX_SEPARATOR UTF8String]);
+           "-output-file-name Nombre del fichero generado\n"
+           "--disable-input-output-files-validation Deshabilita la validación de los inputs y outputs files. Usar sólo para dar compatibilidad a Legacy Build System\n"
+           "--unlock-files Indica que los ficheros de salida no se deben bloquear en el sistema\n\n", [DEFAULT_LOCALIZABLE_ENDPOINT UTF8String], [CUSTOM_REG_EX_SEPARATOR UTF8String]);
+    exit(1);
 }
 
 #pragma mark - BL
 
 - (void) executeAction {
+    self.scriptActionSwift = [[ScriptActionSwift alloc] initWithOutputDirectory:self.outputLocalizableDirectory pwd:self.pwd unlockFiles:self.unlockFiles disableInputOutputFilesValidation:self.disableInputOutputFilesValidation];
     [self getFileFromCloud];
+    [self.scriptActionSwift createTempFile];
     //exit(0);
 }
     
@@ -336,6 +366,7 @@
         NSRegularExpression *customRegex = [NSRegularExpression regularExpressionWithPattern:[regex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] options:NSRegularExpressionCaseInsensitive error:&error];
         modifiedString = [customRegex stringByReplacingMatchesInString:modifiedString options:0 range:NSMakeRange(0, [modifiedString length]) withTemplate:@"%@"];
     }
+    modifiedString = [modifiedString stringByReplacingOccurrencesOfString:@"\r\n" withString:@"\\r\\n"];
     
     return modifiedString;
 }
@@ -355,11 +386,15 @@
     if (error) {
         printf("%s", [error.description UTF8String]);
     } else {
-        [stringInterfaceOutput writeToFile:[outDirectory stringByAppendingPathComponent:[self stringFileName]] atomically:YES encoding:NSUTF8StringEncoding error:&error];
+        NSString *path = [outDirectory stringByAppendingPathComponent:self.fileName];
+        [self.scriptActionSwift validateInputOutputWithOutput:path];
+        [self.scriptActionSwift unlockFile:path];
+        [stringInterfaceOutput writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
+        [self.scriptActionSwift lockFile:path];
         if (error) {
             printf("%s", [error.description UTF8String]);
         } else {
-            printf("Fichero %s generado en la ruta %s\n", [[self stringFileName] UTF8String], [outDirectory UTF8String]);
+            printf("Fichero %s generado en la ruta %s\n", [self.fileName UTF8String], [outDirectory UTF8String]);
             printf("Generadas %lu claves", (unsigned long)arrayConstants.count);
         }
     }
@@ -369,7 +404,7 @@
 - (NSMutableString *) generateHeaderStringFile:(NSArray *) arrayConstants{
     NSMutableString *stringOutput = [NSMutableString new];
     [stringOutput appendString:@"//  This is a generated file, do not edit!\n"];
-    [stringOutput appendFormat:@"//  %@\n", [self stringFileName]];
+    [stringOutput appendFormat:@"//  %@\n", self.fileName];
     [stringOutput appendString:@"//\n"];
     [stringOutput appendString:@"//  Created by SDOS\n"];
     [stringOutput appendString:@"//\n"];
@@ -377,16 +412,6 @@
     [stringOutput appendString:@"\n"];
     
     return stringOutput;
-}
-
-#pragma mark - FileName
-
-- (NSString *) stringFileName {
-    NSString *result = STRING_FILENAME;
-    if (self.prefixName != nil && ![self.prefixName isEqualToString:@""]) {
-        result = [NSString stringWithFormat:@"%@%@", self.prefixName, result];
-    }
-    return result;
 }
 
 @end
