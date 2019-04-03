@@ -48,3 +48,5 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
+
+src/Scripts/*.swiftmodule
