@@ -251,12 +251,12 @@
 - (void)printUsage
 {
 	printf("Los valores válidos son los siguientes:\n");
-	printf("-output-directory directorio de salida para el fichero localizableGenerate.strings generado\n"
-           "-cloudBundleKey key de la aplicación cloud para descargar los ficheros\n"
-           "-cloudVersion versión de la aplicación cloud para descargar los ficheros\n"
-           "-cloudAccesToken acces token de la aplicación cloud para descargar los ficheros (por defecto el de SDOS)\n"
-           "-cloudEndpoint endpoint de la aplicación cloud para descargar los ficheros (por defecto: %s)\n"
-           "-cloudCustomRegEx listado de expresiones regulares separados por (%s). No pueden contener espacios. El caracter \\ se representa con \\\\ (Ejemplo \\\\{[^\\\\{\\\\}\\\\s]+\\\\})\n"
+	printf("-output-directory Directorio de salida para el fichero localizableGenerate.strings generado\n"
+           "-cloudBundleKey Key del proyecto de l10n  para generar los ficheros\n"
+           "-cloudVersion Versión del proyecto de l10n para generar los ficheros\n"
+           "-cloudAccesToken Access token del proyecto cloud para generar los ficheros (por defecto el de SDOS)\n"
+           "-cloudEndpoint Endpoint de la aplicación cloud para descargar los ficheros (por defecto: %s)\n"
+           "-cloudCustomRegEx Listado de expresiones regulares separados por (%s). No pueden contener espacios. El caracter \\ se representa con \\\\ (Ejemplo \\\\{[^\\\\{\\\\}\\\\s]+\\\\})\n"
            "-output-file-name Nombre del fichero generado\n"
            "--disable-input-output-files-validation Deshabilita la validación de los inputs y outputs files. Usar sólo para dar compatibilidad a Legacy Build System\n"
            "--unlock-files Indica que los ficheros de salida no se deben bloquear en el sistema\n\n", [DEFAULT_LOCALIZABLE_ENDPOINT UTF8String], [CUSTOM_REG_EX_SEPARATOR UTF8String]);
