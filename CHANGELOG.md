@@ -1,3 +1,11 @@
+## [1.0.1 Documentación](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v1.0.1)
+
+- Cambios en la documentación
+
+## [1.0.0 Documentación](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v1.0.0)
+
+- Cambios en la documentación
+
 ## [0.9.2 Añadido soporte para el nuevo Build System](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v0.9.2)
 
 - Se ha añadido soporte para el nuevo Build System. Ahora es necesario poner las rutas correctas en los campos input files y output files

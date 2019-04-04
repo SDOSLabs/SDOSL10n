@@ -7,6 +7,7 @@
 # SDOSL10n
 
 - Enlace confluence: https://kc.sdos.es/x/YALLAQ
+- Changelog: https://svrgitpub.sdos.es/iOS/SDOSL10n/blob/master/CHANGELOG.md
 
 ## Introducción
 SDOSL10n es un script que genera los ficheros `.strings` a partir de un proyecto creado en la plataforma https://l10n.sdos.es. Esta plataforma permite definir los strings de un proyecto en varios idiomas y se pueden usar tanto en iOS como en Android.
@@ -23,10 +24,10 @@ pod 'SDOSL10n', '~>1.0.0'
 
 ## Cómo se usa
 
-Hay que lanzar un script durante la compilación que generará los ficheros `.strings` configurados en el proyecto de l10n indicado. Estos ficheros deberán añadirse en el proyecto. Para la ejecución del scripit hay que seguir los siguientes pasos:
+Hay que lanzar un script durante la compilación que generará los ficheros `.strings` configurados en el proyecto de l10n indicado. Estos ficheros deberán añadirse en el proyecto. Para la ejecución del script hay que seguir los siguientes pasos:
 
 1. En Xcode: Pulsar sobre *File*, *New*, *Target*, elegir la opción *Cross-platform*, seleccionar *Aggregate* e indicar el nombre *L10n*
-2. Seleccionar el proyecto, elegir el TARGET que acabamos de crear, selccionar la pestaña de `Build Phases` y pulsar en añadir `New Run Script Phase` en el icono de **`+`** arriba a la izquierda
+2. Seleccionar el proyecto, elegir el TARGET que acabamos de crear, seleccionar la pestaña de `Build Phases` y pulsar en añadir `New Run Script Phase` en el icono de **`+`** arriba a la izquierda
 4. (Opcional) Renombrar el script a `L10n`
 5. Copiar el siguiente script:
     ```sh
@@ -34,7 +35,7 @@ Hay que lanzar un script durante la compilación que generará los ficheros `.st
         "$PODS_ROOT/SDOSL10n/src/Scripts/SDOSL10n" -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings" --unlock-files
     fi
     ```
-    <sup><sub>Los valores del script pueden cambiarse en función de las necesidades del proyecto</sup></sub>
+    > Los valores del script pueden cambiarse en función de las necesidades del proyecto
 6. Añadir `${TEMP_DIR}/SDOSL10n-lastrun` al apartado `Input Files`. **No poner comillas**
 7. Añadir `${SRCROOT}/main/resources/generated/es.lproj/LocalizableGenerated.strings` al apartado `Output Files`. **No poner comillas**. **Cuidado**: este valor variará dependiendo de los idiomas que tenga el proyecto de L10n. Hay que añadir todos los ficheros `.strings` que genere el script a este paso
 8. Editar el Scheme del target de *L10n* para marcar la opción *Shared*
