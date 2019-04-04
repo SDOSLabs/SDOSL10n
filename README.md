@@ -7,6 +7,7 @@
 # SDOSL10n
 
 - Enlace confluence: https://kc.sdos.es/x/YALLAQ
+- Changelog: https://svrgitpub.sdos.es/iOS/SDOSL10n/blob/master/CHANGELOG.md
 
 ## Introducción
 SDOSL10n es un script que genera los ficheros `.strings` a partir de un proyecto creado en la plataforma https://l10n.sdos.es. Esta plataforma permite definir los strings de un proyecto en varios idiomas y se pueden usar tanto en iOS como en Android.
