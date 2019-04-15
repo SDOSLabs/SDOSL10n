@@ -19,7 +19,7 @@ SDOSL10n es un script que genera los ficheros `.strings` a partir de un proyecto
 Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile`:
 
 ```ruby
-pod 'SDOSL10n', '~>1.0.2' 
+pod 'SDOSL10n', '~>1.0.3' 
 ```
 
 ## Cómo se usa
