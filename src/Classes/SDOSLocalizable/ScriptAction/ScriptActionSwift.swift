@@ -65,7 +65,7 @@ extension ScriptActionSwift {
         if let tmpDir = ProcessInfo.processInfo.environment["TEMP_DIR"] {
             for source in sources {
                 if !params.contains(source) {
-                    print("[SDOSEnvironment] - \(message) '\(source.replacingOccurrences(of: tmpDir, with: "${TEMP_DIR}"))'.")
+                    print("[SDOSL10n] - \(message) '\(source.replacingOccurrences(of: tmpDir, with: "${TEMP_DIR}"))'.")
                     exit(7)
                 }
             }
@@ -76,7 +76,7 @@ extension ScriptActionSwift {
     func checkOutput(params: [String], sources: [String], message: String) {
         for source in sources {
             if !params.contains(source) {
-                print("[SDOSEnvironment] - \(message) '\(source.replacingOccurrences(of: pwd, with: "${SRCROOT}"))'.")
+                print("[SDOSL10n] - \(message) '\(source.replacingOccurrences(of: pwd, with: "${SRCROOT}"))'.")
                 exit(7)
             }
         }
