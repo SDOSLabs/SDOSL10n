@@ -1,3 +1,7 @@
+## [1.0.2 Documentación](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v1.0.2)
+
+- Arreglado mensaje de error cuando se usaba el script con algún fallo.
+
 ## [1.0.1 Documentación](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v1.0.1)
 
 - Cambios en la documentación
