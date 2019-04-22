@@ -85,14 +85,18 @@ extension ScriptActionSwift {
 
 extension ScriptActionSwift {
     @objc func unlockFile(_ path: String) {
-        shell("-c", "chflags -R nouchg \(path)")
+        if FileManager.default.fileExists(atPath: path) {
+            shell("-c", "chmod 644 \(path)")
+        }
     }
     
     @objc func lockFile(_ path: String) {
         guard !unlockFiles else {
             return
         }
-        shell("-c", "chflags uchg \(path)")
+        if FileManager.default.fileExists(atPath: path) {
+            shell("-c", "chmod 444 \(path)")
+        }
     }
     
     @objc func createTempFile() {

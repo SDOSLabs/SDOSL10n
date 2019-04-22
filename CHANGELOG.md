@@ -1,8 +1,12 @@
-## [1.0.2 Documentación](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v1.0.2)
+## [1.0.4 Lock files](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v1.0.4)
+
+- Modificada la forma de bloquear los ficheros. Ahora les quita el permiso de escritura
+
+## [1.0.3 Documentación](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v1.0.3)
 
 - Arreglado mensaje de error cuando se usaba el script con algún fallo.
 
-## [1.0.3 Documentación](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v1.0.3)
+## [1.0.2 Documentación](https://svrgitpub.sdos.es/iOS/SDOSL10n/tree/v1.0.2)
 
 - Arreglado mensaje de error cuando se usaba el script con algún fallo.
 
