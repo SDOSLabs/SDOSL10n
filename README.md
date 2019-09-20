@@ -1,13 +1,13 @@
 - [SDOSL10n](#sdosl10n)
-  - [Introducción](#introducci%C3%B3n)
-  - [Instalación](#instalaci%C3%B3n)
+  - [Introducción](#introducci%c3%b3n)
+  - [Instalación](#instalaci%c3%b3n)
     - [Cocoapods](#cocoapods)
-  - [Cómo se usa](#c%C3%B3mo-se-usa)
+  - [Cómo se usa](#c%c3%b3mo-se-usa)
 
 # SDOSL10n
 
 - Enlace confluence: https://kc.sdos.es/x/YALLAQ
-- Changelog: https://svrgitpub.sdos.es/iOS/SDOSL10n/blob/master/CHANGELOG.md
+- Changelog: https://github.com/SDOSLabs/SDOSL10n/blob/master/CHANGELOG.md
 
 ## Introducción
 SDOSL10n es un script que genera los ficheros `.strings` a partir de un proyecto creado en la plataforma https://l10n.sdos.es. Esta plataforma permite definir los strings de un proyecto en varios idiomas y se pueden usar tanto en iOS como en Android.
@@ -28,18 +28,18 @@ Hay que lanzar un script durante la compilación que generará los ficheros `.st
 
 1. En Xcode: Pulsar sobre *File*, *New*, *Target*, elegir la opción *Cross-platform*, seleccionar *Aggregate* e indicar el nombre *L10n*
 2. Seleccionar el proyecto, elegir el TARGET que acabamos de crear, seleccionar la pestaña de `Build Phases` y pulsar en añadir `New Run Script Phase` en el icono de **`+`** arriba a la izquierda
-4. (Opcional) Renombrar el script a `L10n`
-5. Copiar el siguiente script:
+3. (Opcional) Renombrar el script a `L10n`
+4. Copiar el siguiente script:
     ```sh
     if [ -x "$PODS_ROOT/SDOSL10n/src/Scripts/SDOSL10n" ]; then
         "$PODS_ROOT/SDOSL10n/src/Scripts/SDOSL10n" -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings" --unlock-files
     fi
     ```
     > Los valores del script pueden cambiarse en función de las necesidades del proyecto
-6. Añadir `${TEMP_DIR}/SDOSL10n-lastrun` al apartado `Input Files`. **No poner comillas**
-7. Añadir `${SRCROOT}/main/resources/generated/es.lproj/LocalizableGenerated.strings` al apartado `Output Files`. **No poner comillas**. **Cuidado**: este valor variará dependiendo de los idiomas que tenga el proyecto de L10n. Hay que añadir todos los ficheros `.strings` que genere el script a este paso
-8. Editar el Scheme del target de *L10n* para marcar la opción *Shared*
-9. Compilar el scheme del target. Esto generará los ficheros en la ruta `${SRCROOT}/main/resources/generated` que deberán ser incluidos en el proyecto. **Hay que añadir los fichero `.strings`, no las carpetas**
+5. Añadir `${TEMP_DIR}/SDOSL10n-lastrun` al apartado `Input Files`. **No poner comillas**
+6. Añadir `${SRCROOT}/main/resources/generated/es.lproj/LocalizableGenerated.strings` al apartado `Output Files`. **No poner comillas**. **Cuidado**: este valor variará dependiendo de los idiomas que tenga el proyecto de L10n. Hay que añadir todos los ficheros `.strings` que genere el script a este paso
+7. Editar el Scheme del target de *L10n* para marcar la opción *Shared*
+8. Compilar el scheme del target. Esto generará los ficheros en la ruta `${SRCROOT}/main/resources/generated` que deberán ser incluidos en el proyecto. **Hay que añadir los fichero `.strings`, no las carpetas**
 
 Los valores del script `${L10N_ACCESS_TOKEN}`, `${L10N_VERSION}` y `${L10N_BUNDLE_KEY}` son parámetros que deben estar en el *Build Settings* del TARGET. Por lo general, estos parámetros están definidos en el fichero `.xcconfig` del proyecto. Hay que asegurarse que los ficheros `.xcconfig` están añadidos al TARGET de L10n. Esta configuración se puede consultar en el proyecto, siguiendo los siguientes pasos:
 1. Seleccionar el proyecto, elegir el *Project* y pulsar sobre el apartado *Info*
