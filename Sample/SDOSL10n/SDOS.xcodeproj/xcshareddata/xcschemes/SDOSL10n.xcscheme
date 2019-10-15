@@ -87,12 +87,12 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-output-directory ${PROJECT_DIR}/Example/LocalizableStrings"
+            argument = "-output-directory ${PROJECT_DIR}/App/../Example/LocalizableStrings"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--disable-input-output-files-validation"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--unlock-files"
@@ -117,7 +117,7 @@
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "SCRIPT_OUTPUT_FILE_0"
-            value = "${PROJECT_DIR}/Example/LocalizableStrings/es.lproj/LocalizableGenerated.strings"
+            value = "${PROJECT_DIR}/App/../Example/LocalizableStrings/es.lproj/LocalizableGenerated.strings"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
