@@ -1,3 +1,7 @@
+## [HEAD]
+
+- Se ha arreglado un error por el que la validación de los inputs y output files no funcionaban correctamente si la ruta contenia "../"
+
 ## [1.0.4 Lock files](https://github.com/SDOSLabs/SDOSL10n/tree/v1.0.4)
 
 - Modificada la forma de bloquear los ficheros. Ahora les quita el permiso de escritura
