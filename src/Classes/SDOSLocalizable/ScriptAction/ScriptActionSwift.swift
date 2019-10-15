@@ -45,7 +45,7 @@ extension ScriptActionSwift {
             if let num = Int(numString) {
                 for i in 0...num {
                     if let param = ProcessInfo.processInfo.environment["SCRIPT_\(type.rawValue)_FILE_\(i)"] {
-                        params.append(param)
+                        params.append(resolvePath(path: param))
                     }
                 }
             }
@@ -54,32 +54,40 @@ extension ScriptActionSwift {
     }
     
     func checkInput(params: [String], sources: [String]) {
-        checkInput(params: params, sources: sources, message: "Build phase Intput Files does not contain")
+        checkInputOutput(params: params, sources: sources, message: "Build phase Intput Files does not contain")
     }
     
     func checkOutput(params: [String], sources: [String]) {
-        checkOutput(params: params, sources: sources, message: "Build phase Output Files does not contain")
+        checkInputOutput(params: params, sources: sources, message: "Build phase Output Files does not contain")
     }
     
-    func checkInput(params: [String], sources: [String], message: String) {
-        if let tmpDir = ProcessInfo.processInfo.environment["TEMP_DIR"] {
-            for source in sources {
-                if !params.contains(source) {
-                    print("[SDOSL10n] - \(message) '\(source.replacingOccurrences(of: tmpDir, with: "${TEMP_DIR}"))'.")
-                    exit(7)
-                }
-            }
-        }
-        
-    }
-    
-    func checkOutput(params: [String], sources: [String], message: String) {
+    func checkInputOutput(params: [String], sources: [String], message: String) {
         for source in sources {
-            if !params.contains(source) {
-                print("[SDOSL10n] - \(message) '\(source.replacingOccurrences(of: pwd, with: "${SRCROOT}"))'.")
+            let realSource = resolvePath(path: source)
+            if !params.contains(realSource) {
+                print("[SDOSEnvironment] - \(message) '\(source.replacingOccurrences(of: pwd, with: "${SRCROOT}"))'.")
                 exit(7)
             }
         }
+    }
+    
+    func resolvePath(path: String) -> String {
+        var arrayComponents: [String] = path.components(separatedBy: "/").reversed()
+        var numComponentsToDelete = 0
+        arrayComponents = arrayComponents.compactMap { item -> String? in
+            if item == ".." {
+                numComponentsToDelete += 1
+                return nil
+            } else {
+                if numComponentsToDelete != 0 {
+                    numComponentsToDelete -= 1
+                    return nil
+                } else {
+                    return item
+                }
+            }
+        }
+        return arrayComponents.reversed().joined(separator: "/")
     }
 }
 
