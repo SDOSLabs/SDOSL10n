@@ -65,7 +65,7 @@ extension ScriptActionSwift {
         for source in sources {
             let realSource = resolvePath(path: source)
             if !params.contains(realSource) {
-                print("[SDOSEnvironment] - \(message) '\(source.replacingOccurrences(of: pwd, with: "${SRCROOT}"))'.")
+                print("[SDOSL10n] - \(message) '\(source.replacingOccurrences(of: pwd, with: "${SRCROOT}"))'.")
                 exit(7)
             }
         }
