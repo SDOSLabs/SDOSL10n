@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29D10364224B653200B787BF /* ScriptActionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D10363224B653200B787BF /* ScriptActionSwift.swift */; };
+		2985916F253D764200FF85B4 /* ScriptActionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2985916E253D764200FF85B4 /* ScriptActionSwift.swift */; };
 		B1C077D41E7BE3E700789B22 /* ConsoleParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077CA1E7BE3E700789B22 /* ConsoleParameter.m */; };
 		B1C077D51E7BE3E700789B22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077CD1E7BE3E700789B22 /* main.m */; };
 		B1C077D61E7BE3E700789B22 /* ScriptAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077D01E7BE3E700789B22 /* ScriptAction.m */; };
@@ -30,25 +30,11 @@
 
 /* Begin PBXFileReference section */
 		291E87C9226DBB2100726264 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableGenerated.strings; sourceTree = "<group>"; };
+		2985916E253D764200FF85B4 /* ScriptActionSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptActionSwift.swift; sourceTree = "<group>"; };
 		29D10362224B653200B787BF /* SDOSL10n-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDOSL10n-Bridging-Header.h"; sourceTree = "<group>"; };
-		29D10363224B653200B787BF /* ScriptActionSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptActionSwift.swift; sourceTree = "<group>"; };
 		29D10366224B75AB00B787BF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableGenerated.strings; sourceTree = "<group>"; };
 		29D10369224B840A00B787BF /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
 		29D1036A224B840A00B787BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		5CEE69C9204FF732008A3EDC /* LocalizableConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizableConstants.h; sourceTree = "<group>"; };
-		5CEE69CB204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5CEE69CD204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5CEE69CF204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableGenerate.strings; sourceTree = "<group>"; };
-		5CEE69D0204FF732008A3EDC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5CEE69D1204FF732008A3EDC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5CEE69D2204FF732008A3EDC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableGenerate.strings; sourceTree = "<group>"; };
-		5CEE69D3204FF732008A3EDC /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5CEE69D4204FF732008A3EDC /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5CEE69D5204FF732008A3EDC /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/LocalizableGenerate.strings; sourceTree = "<group>"; };
-		5CEE69D6204FF759008A3EDC /* Other test.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Other test.xcassets"; sourceTree = "<group>"; };
-		5CEE69D7204FF759008A3EDC /* Test.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Test.xcassets; sourceTree = "<group>"; };
-		5CEE69D8204FF759008A3EDC /* default.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = default.bundle; sourceTree = "<group>"; };
-		5CEE69DA204FF759008A3EDC /* ImagesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesConstants.h; sourceTree = "<group>"; };
 		B1ABC1811E487AE5005C5F91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1C077AF1E7BE32B00789B22 /* SDOSL10n */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDOSL10n; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C077C91E7BE3E700789B22 /* ConsoleParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleParameter.h; sourceTree = "<group>"; };
@@ -92,44 +78,12 @@
 			path = LocalizableStrings;
 			sourceTree = "<group>";
 		};
-		5CEE69BF204FF6AA008A3EDC /* Resources */ = {
+		2985916D253D764200FF85B4 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				5CEE69C1204FF731008A3EDC /* ImagesConstants */,
-				5CEE69C8204FF732008A3EDC /* SDOSLocalizable */,
+				2985916E253D764200FF85B4 /* ScriptActionSwift.swift */,
 			);
-			name = Resources;
-			path = Example/Resources;
-			sourceTree = "<group>";
-		};
-		5CEE69C1204FF731008A3EDC /* ImagesConstants */ = {
-			isa = PBXGroup;
-			children = (
-				5CEE69D8204FF759008A3EDC /* default.bundle */,
-				5CEE69D6204FF759008A3EDC /* Other test.xcassets */,
-				5CEE69D9204FF759008A3EDC /* Output */,
-				5CEE69D7204FF759008A3EDC /* Test.xcassets */,
-			);
-			path = ImagesConstants;
-			sourceTree = "<group>";
-		};
-		5CEE69C8204FF732008A3EDC /* SDOSLocalizable */ = {
-			isa = PBXGroup;
-			children = (
-				5CEE69C9204FF732008A3EDC /* LocalizableConstants.h */,
-				5CEE69CA204FF732008A3EDC /* Localizable.strings */,
-				5CEE69CC204FF732008A3EDC /* InfoPlist.strings */,
-				5CEE69CE204FF732008A3EDC /* LocalizableGenerate.strings */,
-			);
-			path = SDOSLocalizable;
-			sourceTree = "<group>";
-		};
-		5CEE69D9204FF759008A3EDC /* Output */ = {
-			isa = PBXGroup;
-			children = (
-				5CEE69DA204FF759008A3EDC /* ImagesConstants.h */,
-			);
-			path = Output;
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		B1ABC1641E487827005C5F91 = {
@@ -139,7 +93,6 @@
 				29D1036A224B840A00B787BF /* README.md */,
 				292A749322427FA200F43CAE /* Example */,
 				B1C077C71E7BE3E700789B22 /* SDOSLocalizable */,
-				5CEE69BF204FF6AA008A3EDC /* Resources */,
 				B1ABC16E1E487827005C5F91 /* Products */,
 				B1ABC1801E487AE5005C5F91 /* Frameworks */,
 			);
@@ -164,6 +117,7 @@
 		B1C077C71E7BE3E700789B22 /* SDOSLocalizable */ = {
 			isa = PBXGroup;
 			children = (
+				2985916D253D764200FF85B4 /* Swift */,
 				B1C077C81E7BE3E700789B22 /* ConsoleParameter */,
 				B1C077CB1E7BE3E700789B22 /* Constants */,
 				B1C077CD1E7BE3E700789B22 /* main.m */,
@@ -171,7 +125,7 @@
 				B1C077D11E7BE3E700789B22 /* Util */,
 			);
 			name = SDOSLocalizable;
-			path = ../../src/Classes/SDOSLocalizable;
+			path = ../../src/Scripts/Classes/SDOSLocalizable;
 			sourceTree = "<group>";
 		};
 		B1C077C81E7BE3E700789B22 /* ConsoleParameter */ = {
@@ -198,7 +152,6 @@
 				B1C077D91E7C0A2E00789B22 /* LanguageObject */,
 				B1C077CF1E7BE3E700789B22 /* ScriptAction.h */,
 				B1C077D01E7BE3E700789B22 /* ScriptAction.m */,
-				29D10363224B653200B787BF /* ScriptActionSwift.swift */,
 				29D10362224B653200B787BF /* SDOSL10n-Bridging-Header.h */,
 			);
 			path = ScriptAction;
@@ -311,11 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C077D51E7BE3E700789B22 /* main.m in Sources */,
+				2985916F253D764200FF85B4 /* ScriptActionSwift.swift in Sources */,
 				B1C077D41E7BE3E700789B22 /* ConsoleParameter.m in Sources */,
 				B1C077D61E7BE3E700789B22 /* ScriptAction.m in Sources */,
 				B1C077D71E7BE3E700789B22 /* Util.m in Sources */,
 				B1C077DF1E7C0A4700789B22 /* LanguageObject.m in Sources */,
-				29D10364224B653200B787BF /* ScriptActionSwift.swift in Sources */,
 				B1C077DC1E7C0A3C00789B22 /* LanguageCollectionObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,36 +283,6 @@
 				291E87C9226DBB2100726264 /* en */,
 			);
 			name = LocalizableGenerated.strings;
-			sourceTree = "<group>";
-		};
-		5CEE69CA204FF732008A3EDC /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CEE69CB204FF732008A3EDC /* en */,
-				5CEE69D0204FF732008A3EDC /* es */,
-				5CEE69D3204FF732008A3EDC /* ca */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		5CEE69CC204FF732008A3EDC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CEE69CD204FF732008A3EDC /* en */,
-				5CEE69D1204FF732008A3EDC /* es */,
-				5CEE69D4204FF732008A3EDC /* ca */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5CEE69CE204FF732008A3EDC /* LocalizableGenerate.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CEE69CF204FF732008A3EDC /* en */,
-				5CEE69D2204FF732008A3EDC /* es */,
-				5CEE69D5204FF732008A3EDC /* ca */,
-			);
-			name = LocalizableGenerate.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -462,7 +385,7 @@
 				DEVELOPMENT_TEAM = FR53QH8ZBJ;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Scripts/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -476,7 +399,7 @@
 				DEVELOPMENT_TEAM = FR53QH8ZBJ;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Scripts/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

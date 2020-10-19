@@ -8,13 +8,13 @@
 
 import Foundation
 
-@objc class ScriptActionSwift: NSObject {
-    var disableInputOutputFilesValidation = false
-    var unlockFiles = false
-    var outputDirectory: String
-    var pwd: String
+@objc public class ScriptActionSwift: NSObject {
+    public var disableInputOutputFilesValidation = false
+    public var unlockFiles = false
+    public var outputDirectory: String
+    public var pwd: String
     
-    @objc required init(outputDirectory: String, pwd: String, unlockFiles: Bool, disableInputOutputFilesValidation: Bool) {
+    @objc public required init(outputDirectory: String, pwd: String, unlockFiles: Bool, disableInputOutputFilesValidation: Bool) {
         self.outputDirectory = outputDirectory
         self.pwd = pwd
         self.unlockFiles = unlockFiles
@@ -23,7 +23,7 @@ import Foundation
     
 }
 
-extension ScriptActionSwift {
+public extension ScriptActionSwift {
     enum TypeParams: String {
         case INPUT
         case OUTPUT
@@ -91,7 +91,7 @@ extension ScriptActionSwift {
     }
 }
 
-extension ScriptActionSwift {
+public extension ScriptActionSwift {
     @objc func unlockFile(_ path: String) {
         if FileManager.default.fileExists(atPath: path) {
             shell("-c", "chmod 644 \(path)")
