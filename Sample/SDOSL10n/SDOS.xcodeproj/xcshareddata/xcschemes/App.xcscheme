@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "29859175253D887100FF85B4"
-               BuildableName = "AppL10n.app"
-               BlueprintName = "AppL10n"
+               BlueprintIdentifier = "29859187253D88BA00FF85B4"
+               BuildableName = "AppL10n-SPM.app"
+               BlueprintName = "AppL10n-SPM"
                ReferencedContainer = "container:SDOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "29859175253D887100FF85B4"
-            BuildableName = "AppL10n.app"
-            BlueprintName = "AppL10n"
+            BlueprintIdentifier = "29859187253D88BA00FF85B4"
+            BuildableName = "AppL10n-SPM.app"
+            BlueprintName = "AppL10n-SPM"
             ReferencedContainer = "container:SDOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "29859175253D887100FF85B4"
-            BuildableName = "AppL10n.app"
-            BlueprintName = "AppL10n"
+            BlueprintIdentifier = "29859187253D88BA00FF85B4"
+            BuildableName = "AppL10n-SPM.app"
+            BlueprintName = "AppL10n-SPM"
             ReferencedContainer = "container:SDOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
