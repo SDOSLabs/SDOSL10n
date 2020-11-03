@@ -17,11 +17,12 @@ SDOSL10n es un script que genera los ficheros `.strings` a partir de un proyecto
 
 ### Cocoapods
 
-Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile`:
+Usaremos [CocoaPods](https://cocoapods.org).
 
-Añadir el  "source" al `Podfile`:
+Añadir el "source" privado de SDOSLabs al `Podfile`. Añadir también el source público de cocoapods para poder seguir instalando dependencias desde éste:
 ```ruby
-source 'https://github.com/SDOSLabs/cocoapods-specs.git'
+source 'https://github.com/SDOSLabs/cocoapods-specs.git' #SDOSLabs source
+source 'https://github.com/CocoaPods/Specs.git' #Cocoapods source
 ```
 
 Añadir la dependencia al `Podfile`:
@@ -39,7 +40,7 @@ Esta librería la usaremos en la `Build Phase` de nuestro proyecto. El script de
 
 ``` swift
 dependencies: [
-    .package(url: "https://github.com/SDOSLabs/SDOSEnvironment.git", .upToNextMajor(from: "1.2.0"))
+    .package(url: "https://github.com/SDOSLabs/SDOSL10n.git", .upToNextMajor(from: "1.2.0"))
 ]
 ```
 
@@ -64,7 +65,7 @@ Hay que lanzar un script durante la compilación que generará los ficheros `.st
     ```sh
     SPM_PATH="${SRCROOT}/Autogenerate"
 
-    (cd $SPM_PATH && xcrun --sdk macosx swift run SDOSL10n -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings" --unlock-files")
+    (cd $SPM_PATH && xcrun --sdk macosx swift run SDOSL10nScript -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings" --unlock-files)
     ```
     > Los valores del script pueden cambiarse en función de las necesidades del proyecto
 5. Añadir `${TEMP_DIR}/SDOSL10n-lastrun` al apartado `Input Files`. **No poner comillas**
