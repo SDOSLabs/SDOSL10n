@@ -1,8 +1,9 @@
 - [SDOSL10n](#sdosl10n)
-  - [Introducción](#introducci%c3%b3n)
-  - [Instalación](#instalaci%c3%b3n)
+  - [Introducción](#introducción)
+  - [Instalación](#instalación)
     - [Cocoapods](#cocoapods)
-  - [Cómo se usa](#c%c3%b3mo-se-usa)
+    - [Swift Package Manager](#swift-package-manager)
+  - [Cómo se usa](#cómo-se-usa)
 
 # SDOSL10n
 
@@ -18,9 +19,31 @@ SDOSL10n es un script que genera los ficheros `.strings` a partir de un proyecto
 
 Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile`:
 
+Añadir el  "source" al `Podfile`:
 ```ruby
-pod 'SDOSL10n', '~>1.0.4' 
+source 'https://github.com/SDOSLabs/cocoapods-specs.git'
 ```
+
+Añadir la dependencia al `Podfile`:
+```ruby
+pod 'SDOSL10n', '~>1.1.0' 
+```
+
+### Swift Package Manager
+
+Esta librería la usaremos en la `Build Phase` de nuestro proyecto. El script de esta librería no se debe incluir en el binario de la aplicación y sólamente servirá para generar código. Para que podamos usarlo deberemos instalar la librería de la siguiente forma:
+
+1. Crearnos una dependencia local en nuestro proyecto. Para ello nuestro proyecto debe estar incluido en un `.xcworkspace`. Debemos pulsar el botón `+` situado en la parte inferior izquierda del Xcode y seleccionar la opción "New Swift Package...".
+2. Le pondremos el nombre "Autogenerate" al paquete.
+3. Añadiremos la dependencia de `SDOSL10n` en el `Package.swift`, sin necesidad de añadirlo al target:
+
+``` swift
+dependencies: [
+    .package(url: "https://github.com/SDOSLabs/SDOSEnvironment.git", .upToNextMajor(from: "1.2.0"))
+]
+```
+
+De esta forma tendremos una carpeta en la raiz de nuestro proyecto que se llamará "Autogenerate" que contendrá un fichero `Package.swift` que usaremos más adelante para ejecutar el script.
 
 ## Cómo se usa
 
@@ -30,10 +53,18 @@ Hay que lanzar un script durante la compilación que generará los ficheros `.st
 2. Seleccionar el proyecto, elegir el TARGET que acabamos de crear, seleccionar la pestaña de `Build Phases` y pulsar en añadir `New Run Script Phase` en el icono de **`+`** arriba a la izquierda
 3. (Opcional) Renombrar el script a `L10n`
 4. Copiar el siguiente script:
+
+    **Si la instalación es con cocoapods**
     ```sh
     if [ -x "$PODS_ROOT/SDOSL10n/src/Scripts/SDOSL10n" ]; then
         "$PODS_ROOT/SDOSL10n/src/Scripts/SDOSL10n" -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings" --unlock-files
     fi
+    ```
+    **Si la instalación es con Swift Package Manager**
+    ```sh
+    SPM_PATH="${SRCROOT}/Autogenerate"
+
+    (cd $SPM_PATH && xcrun --sdk macosx swift run SDOSL10n -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings" --unlock-files")
     ```
     > Los valores del script pueden cambiarse en función de las necesidades del proyecto
 5. Añadir `${TEMP_DIR}/SDOSL10n-lastrun` al apartado `Input Files`. **No poner comillas**
