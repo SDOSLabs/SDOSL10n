@@ -13,7 +13,11 @@
 #import "./LanguageObject/LanguageObject.h"
 #import "./LanguageCollectionObject/LanguageCollectionObject.h"
 
+#if SWIFT_PACKAGE
+@import SDOSL10nSwift;
+#else
 #import "SDOSL10n-Swift.h"
+#endif
 
 @interface ScriptAction()
 

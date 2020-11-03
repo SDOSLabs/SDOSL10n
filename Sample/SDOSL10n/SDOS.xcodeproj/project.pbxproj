@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29D10364224B653200B787BF /* ScriptActionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D10363224B653200B787BF /* ScriptActionSwift.swift */; };
+		2985916F253D764200FF85B4 /* ScriptActionSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2985916E253D764200FF85B4 /* ScriptActionSwift.swift */; };
+		29859189253D88BA00FF85B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2985917A253D887100FF85B4 /* ContentView.swift */; };
+		2985918A253D88BA00FF85B4 /* AppL10nApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29859178253D887100FF85B4 /* AppL10nApp.swift */; };
+		2985918D253D88BA00FF85B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2985917F253D887200FF85B4 /* Preview Assets.xcassets */; };
+		2985918E253D88BA00FF85B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2985917C253D887200FF85B4 /* Assets.xcassets */; };
 		B1C077D41E7BE3E700789B22 /* ConsoleParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077CA1E7BE3E700789B22 /* ConsoleParameter.m */; };
 		B1C077D51E7BE3E700789B22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077CD1E7BE3E700789B22 /* main.m */; };
 		B1C077D61E7BE3E700789B22 /* ScriptAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C077D01E7BE3E700789B22 /* ScriptAction.m */; };
@@ -30,25 +34,24 @@
 
 /* Begin PBXFileReference section */
 		291E87C9226DBB2100726264 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableGenerated.strings; sourceTree = "<group>"; };
+		2985916E253D764200FF85B4 /* ScriptActionSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptActionSwift.swift; sourceTree = "<group>"; };
+		29859178253D887100FF85B4 /* AppL10nApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppL10nApp.swift; sourceTree = "<group>"; };
+		2985917A253D887100FF85B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2985917C253D887200FF85B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2985917F253D887200FF85B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29859181253D887200FF85B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29859192253D88BA00FF85B4 /* AppL10n-SPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppL10n-SPM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D10362224B653200B787BF /* SDOSL10n-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDOSL10n-Bridging-Header.h"; sourceTree = "<group>"; };
-		29D10363224B653200B787BF /* ScriptActionSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptActionSwift.swift; sourceTree = "<group>"; };
 		29D10366224B75AB00B787BF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableGenerated.strings; sourceTree = "<group>"; };
 		29D10369224B840A00B787BF /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
 		29D1036A224B840A00B787BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		5CEE69C9204FF732008A3EDC /* LocalizableConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizableConstants.h; sourceTree = "<group>"; };
-		5CEE69CB204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5CEE69CD204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5CEE69CF204FF732008A3EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableGenerate.strings; sourceTree = "<group>"; };
-		5CEE69D0204FF732008A3EDC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5CEE69D1204FF732008A3EDC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5CEE69D2204FF732008A3EDC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableGenerate.strings; sourceTree = "<group>"; };
-		5CEE69D3204FF732008A3EDC /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5CEE69D4204FF732008A3EDC /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5CEE69D5204FF732008A3EDC /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/LocalizableGenerate.strings; sourceTree = "<group>"; };
-		5CEE69D6204FF759008A3EDC /* Other test.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Other test.xcassets"; sourceTree = "<group>"; };
-		5CEE69D7204FF759008A3EDC /* Test.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Test.xcassets; sourceTree = "<group>"; };
-		5CEE69D8204FF759008A3EDC /* default.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = default.bundle; sourceTree = "<group>"; };
-		5CEE69DA204FF759008A3EDC /* ImagesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesConstants.h; sourceTree = "<group>"; };
+		29D4DC11253D9C7D0004F920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29D4DC13253D9C7D0004F920 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		29D4DC15253D9C7D0004F920 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29D4DC18253D9C7D0004F920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29D4DC1A253D9C7E0004F920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29D4DC1D253D9C7E0004F920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		29D4DC1F253D9C7E0004F920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1ABC1811E487AE5005C5F91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1C077AF1E7BE32B00789B22 /* SDOSL10n */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDOSL10n; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C077C91E7BE3E700789B22 /* ConsoleParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleParameter.h; sourceTree = "<group>"; };
@@ -66,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2985918B253D88BA00FF85B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1C077AC1E7BE32B00789B22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,44 +102,53 @@
 			path = LocalizableStrings;
 			sourceTree = "<group>";
 		};
-		5CEE69BF204FF6AA008A3EDC /* Resources */ = {
+		2985916D253D764200FF85B4 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				5CEE69C1204FF731008A3EDC /* ImagesConstants */,
-				5CEE69C8204FF732008A3EDC /* SDOSLocalizable */,
+				2985916E253D764200FF85B4 /* ScriptActionSwift.swift */,
 			);
-			name = Resources;
-			path = Example/Resources;
+			path = Swift;
 			sourceTree = "<group>";
 		};
-		5CEE69C1204FF731008A3EDC /* ImagesConstants */ = {
+		29859177253D887100FF85B4 /* AppL10n */ = {
 			isa = PBXGroup;
 			children = (
-				5CEE69D8204FF759008A3EDC /* default.bundle */,
-				5CEE69D6204FF759008A3EDC /* Other test.xcassets */,
-				5CEE69D9204FF759008A3EDC /* Output */,
-				5CEE69D7204FF759008A3EDC /* Test.xcassets */,
+				29859178253D887100FF85B4 /* AppL10nApp.swift */,
+				2985917A253D887100FF85B4 /* ContentView.swift */,
+				2985917C253D887200FF85B4 /* Assets.xcassets */,
+				29859181253D887200FF85B4 /* Info.plist */,
+				2985917E253D887200FF85B4 /* Preview Content */,
 			);
-			path = ImagesConstants;
+			path = AppL10n;
 			sourceTree = "<group>";
 		};
-		5CEE69C8204FF732008A3EDC /* SDOSLocalizable */ = {
+		2985917E253D887200FF85B4 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				5CEE69C9204FF732008A3EDC /* LocalizableConstants.h */,
-				5CEE69CA204FF732008A3EDC /* Localizable.strings */,
-				5CEE69CC204FF732008A3EDC /* InfoPlist.strings */,
-				5CEE69CE204FF732008A3EDC /* LocalizableGenerate.strings */,
+				2985917F253D887200FF85B4 /* Preview Assets.xcassets */,
 			);
-			path = SDOSLocalizable;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5CEE69D9204FF759008A3EDC /* Output */ = {
+		29D4DC10253D9C7D0004F920 /* AppTest */ = {
 			isa = PBXGroup;
 			children = (
-				5CEE69DA204FF759008A3EDC /* ImagesConstants.h */,
+				29D4DC11253D9C7D0004F920 /* AppDelegate.swift */,
+				29D4DC13253D9C7D0004F920 /* SceneDelegate.swift */,
+				29D4DC15253D9C7D0004F920 /* ViewController.swift */,
+				29D4DC17253D9C7D0004F920 /* Main.storyboard */,
+				29D4DC1A253D9C7E0004F920 /* Assets.xcassets */,
+				29D4DC1C253D9C7E0004F920 /* LaunchScreen.storyboard */,
+				29D4DC1F253D9C7E0004F920 /* Info.plist */,
 			);
-			path = Output;
+			path = AppTest;
+			sourceTree = "<group>";
+		};
+		9CFF01BF0599BFF2217639E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		B1ABC1641E487827005C5F91 = {
@@ -139,9 +158,11 @@
 				29D1036A224B840A00B787BF /* README.md */,
 				292A749322427FA200F43CAE /* Example */,
 				B1C077C71E7BE3E700789B22 /* SDOSLocalizable */,
-				5CEE69BF204FF6AA008A3EDC /* Resources */,
+				29859177253D887100FF85B4 /* AppL10n */,
+				29D4DC10253D9C7D0004F920 /* AppTest */,
 				B1ABC16E1E487827005C5F91 /* Products */,
 				B1ABC1801E487AE5005C5F91 /* Frameworks */,
+				9CFF01BF0599BFF2217639E1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C077AF1E7BE32B00789B22 /* SDOSL10n */,
+				29859192253D88BA00FF85B4 /* AppL10n-SPM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +186,7 @@
 		B1C077C71E7BE3E700789B22 /* SDOSLocalizable */ = {
 			isa = PBXGroup;
 			children = (
+				2985916D253D764200FF85B4 /* Swift */,
 				B1C077C81E7BE3E700789B22 /* ConsoleParameter */,
 				B1C077CB1E7BE3E700789B22 /* Constants */,
 				B1C077CD1E7BE3E700789B22 /* main.m */,
@@ -171,7 +194,7 @@
 				B1C077D11E7BE3E700789B22 /* Util */,
 			);
 			name = SDOSLocalizable;
-			path = ../../src/Classes/SDOSLocalizable;
+			path = ../../src/Scripts/Classes/SDOSLocalizable;
 			sourceTree = "<group>";
 		};
 		B1C077C81E7BE3E700789B22 /* ConsoleParameter */ = {
@@ -198,7 +221,6 @@
 				B1C077D91E7C0A2E00789B22 /* LanguageObject */,
 				B1C077CF1E7BE3E700789B22 /* ScriptAction.h */,
 				B1C077D01E7BE3E700789B22 /* ScriptAction.m */,
-				29D10363224B653200B787BF /* ScriptActionSwift.swift */,
 				29D10362224B653200B787BF /* SDOSL10n-Bridging-Header.h */,
 			);
 			path = ScriptAction;
@@ -234,6 +256,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		29859187253D88BA00FF85B4 /* AppL10n-SPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2985918F253D88BA00FF85B4 /* Build configuration list for PBXNativeTarget "AppL10n-SPM" */;
+			buildPhases = (
+				291336A4253D89CA0030BD0B /* SDOSL10n */,
+				29859188253D88BA00FF85B4 /* Sources */,
+				2985918B253D88BA00FF85B4 /* Frameworks */,
+				2985918C253D88BA00FF85B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AppL10n-SPM";
+			productName = AppL10n;
+			productReference = 29859192253D88BA00FF85B4 /* AppL10n-SPM.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B1C077AE1E7BE32B00789B22 /* SDOSL10n */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1C077B31E7BE32B00789B22 /* Build configuration list for PBXNativeTarget "SDOSL10n" */;
@@ -258,9 +298,13 @@
 		B1ABC1651E487827005C5F91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Rafael Fernandez Alvarez";
 				TargetAttributes = {
+					29859187253D88BA00FF85B4 = {
+						ProvisioningStyle = Automatic;
+					};
 					B1C077AE1E7BE32B00789B22 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FR53QH8ZBJ;
@@ -278,6 +322,7 @@
 				en,
 				es,
 				ca,
+				Base,
 			);
 			mainGroup = B1ABC1641E487827005C5F91;
 			productRefGroup = B1ABC16E1E487827005C5F91 /* Products */;
@@ -285,11 +330,45 @@
 			projectRoot = "";
 			targets = (
 				B1C077AE1E7BE32B00789B22 /* SDOSL10n */,
+				29859187253D88BA00FF85B4 /* AppL10n-SPM */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		2985918C253D88BA00FF85B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2985918D253D88BA00FF85B4 /* Preview Assets.xcassets in Resources */,
+				2985918E253D88BA00FF85B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
+		291336A4253D89CA0030BD0B /* SDOSL10n */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${TEMP_DIR}/SDOSL10n-lastrun",
+			);
+			name = SDOSL10n;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${PROJECT_DIR}/App/../Example/LocalizableStrings/es.lproj/LocalizableGenerated.strings",
+				"${PROJECT_DIR}/App/../Example/LocalizableStrings/en.lproj/LocalizableGenerated.strings",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcrun --sdk macosx swift run SDOSL10nScript -cloudCustomRegEx \"\\\\{[^\\\\{\\\\}\\\\s]+\\\\}\" -cloudAccesToken QGTlFuT -output-file-name LocalizableGenerated.strings -cloudVersion 1.0.0 -cloudBundleKey 8NhKJc -output-directory ${PROJECT_DIR}/App/../Example/LocalizableStrings\n";
+		};
 		5C42F66B205FD99E000EBF45 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,16 +385,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		29859188253D88BA00FF85B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29859189253D88BA00FF85B4 /* ContentView.swift in Sources */,
+				2985918A253D88BA00FF85B4 /* AppL10nApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1C077AB1E7BE32B00789B22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B1C077D51E7BE3E700789B22 /* main.m in Sources */,
+				2985916F253D764200FF85B4 /* ScriptActionSwift.swift in Sources */,
 				B1C077D41E7BE3E700789B22 /* ConsoleParameter.m in Sources */,
 				B1C077D61E7BE3E700789B22 /* ScriptAction.m in Sources */,
 				B1C077D71E7BE3E700789B22 /* Util.m in Sources */,
 				B1C077DF1E7C0A4700789B22 /* LanguageObject.m in Sources */,
-				29D10364224B653200B787BF /* ScriptActionSwift.swift in Sources */,
 				B1C077DC1E7C0A3C00789B22 /* LanguageCollectionObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,39 +420,100 @@
 			name = LocalizableGenerated.strings;
 			sourceTree = "<group>";
 		};
-		5CEE69CA204FF732008A3EDC /* Localizable.strings */ = {
+		29D4DC17253D9C7D0004F920 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5CEE69CB204FF732008A3EDC /* en */,
-				5CEE69D0204FF732008A3EDC /* es */,
-				5CEE69D3204FF732008A3EDC /* ca */,
+				29D4DC18253D9C7D0004F920 /* Base */,
 			);
-			name = Localizable.strings;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5CEE69CC204FF732008A3EDC /* InfoPlist.strings */ = {
+		29D4DC1C253D9C7E0004F920 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5CEE69CD204FF732008A3EDC /* en */,
-				5CEE69D1204FF732008A3EDC /* es */,
-				5CEE69D4204FF732008A3EDC /* ca */,
+				29D4DC1D253D9C7E0004F920 /* Base */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5CEE69CE204FF732008A3EDC /* LocalizableGenerate.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CEE69CF204FF732008A3EDC /* en */,
-				5CEE69D2204FF732008A3EDC /* es */,
-				5CEE69D5204FF732008A3EDC /* ca */,
-			);
-			name = LocalizableGenerate.strings;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		29859190253D88BA00FF85B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AppL10n/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AppL10n/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = es.sdos..AppL10n;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29859191253D88BA00FF85B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AppL10n/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AppL10n/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = es.sdos..AppL10n;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		B1ABC1721E487827005C5F91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -462,7 +611,7 @@
 				DEVELOPMENT_TEAM = FR53QH8ZBJ;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Scripts/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -476,7 +625,7 @@
 				DEVELOPMENT_TEAM = FR53QH8ZBJ;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "../../src/Scripts/Classes/SDOSLocalizable/ScriptAction/SDOSL10n-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -484,6 +633,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2985918F253D88BA00FF85B4 /* Build configuration list for PBXNativeTarget "AppL10n-SPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29859190253D88BA00FF85B4 /* Debug */,
+				29859191253D88BA00FF85B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B1ABC1681E487827005C5F91 /* Build configuration list for PBXProject "SDOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

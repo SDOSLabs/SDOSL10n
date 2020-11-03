@@ -1,3 +1,7 @@
+## [HEAD]
+
+- Add support for Swift Package Manager
+
 ## [1.0.6 Fix files validation](https://github.com/SDOSLabs/SDOSL10n/tree/v1.0.6)
 
 - Se ha arreglado un error por el que la validación de los inputs y output files no funcionaban correctamente si la ruta contenia "../"

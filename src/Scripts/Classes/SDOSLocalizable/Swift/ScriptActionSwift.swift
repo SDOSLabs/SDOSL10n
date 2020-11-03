@@ -8,13 +8,13 @@
 
 import Foundation
 
-@objc class ScriptActionSwift: NSObject {
-    var disableInputOutputFilesValidation = false
-    var unlockFiles = false
-    var outputDirectory: String
-    var pwd: String
+@objc public class ScriptActionSwift: NSObject {
+    public var disableInputOutputFilesValidation = false
+    public var unlockFiles = false
+    public var outputDirectory: String
+    public var pwd: String
     
-    @objc required init(outputDirectory: String, pwd: String, unlockFiles: Bool, disableInputOutputFilesValidation: Bool) {
+    @objc public required init(outputDirectory: String, pwd: String, unlockFiles: Bool, disableInputOutputFilesValidation: Bool) {
         self.outputDirectory = outputDirectory
         self.pwd = pwd
         self.unlockFiles = unlockFiles
@@ -23,10 +23,12 @@ import Foundation
     
 }
 
-extension ScriptActionSwift {
+public extension ScriptActionSwift {
     enum TypeParams: String {
-        case INPUT
-        case OUTPUT
+        case INPUT_FILE
+        case INPUT_FILE_LIST
+        case OUTPUT_FILE
+        case OUTPUT_FILE_LIST
     }
     
     @objc func validateInputOutput(output: String) {
@@ -34,18 +36,28 @@ extension ScriptActionSwift {
             return
         }
         if let tmpDir = ProcessInfo.processInfo.environment["TEMP_DIR"] {
-            checkInput(params: parseParams(type: .INPUT), sources: ["\(tmpDir)/SDOSL10n-lastrun"])
+            checkInput(params: parseParams(type: .INPUT_FILE) + parseParams(type: .INPUT_FILE_LIST), sources: ["\(tmpDir)/SDOSL10n-lastrun"])
         }
-        checkOutput(params: parseParams(type: .OUTPUT), sources: [output])
+        checkOutput(params: parseParams(type: .OUTPUT_FILE) + parseParams(type: .OUTPUT_FILE_LIST), sources: [output])
     }
     
     func parseParams(type: TypeParams) -> [String] {
         var params = [String]()
-        if let numString = ProcessInfo.processInfo.environment["SCRIPT_\(type.rawValue)_FILE_COUNT"] {
+        if let numString = ProcessInfo.processInfo.environment["SCRIPT_\(type.rawValue)_COUNT"] {
             if let num = Int(numString) {
                 for i in 0...num {
-                    if let param = ProcessInfo.processInfo.environment["SCRIPT_\(type.rawValue)_FILE_\(i)"] {
-                        params.append(resolvePath(path: param))
+                    if let param = ProcessInfo.processInfo.environment["SCRIPT_\(type.rawValue)_\(i)"] {
+                        if param.hasSuffix(".files") || param.hasSuffix(".xcfilelist") || type == .INPUT_FILE_LIST || type == .OUTPUT_FILE_LIST {
+                            if let fileContent = try? String(contentsOfFile: param) {
+                                fileContent.split(separator: "\n").map(String.init).forEach {
+                                    if !$0.hasPrefix("#") {
+                                        params.append(resolvePath(path: $0))
+                                    }
+                                }
+                            }
+                        } else {
+                            params.append(resolvePath(path: param))
+                        }
                     }
                 }
             }
@@ -91,7 +103,7 @@ extension ScriptActionSwift {
     }
 }
 
-extension ScriptActionSwift {
+public extension ScriptActionSwift {
     @objc func unlockFile(_ path: String) {
         if FileManager.default.fileExists(atPath: path) {
             shell("-c", "chmod 644 \(path)")

@@ -2,6 +2,15 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+### Xcode ###
+.swiftpm
+*.swiftmodule
+.build/
+build
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+
 ## Build generated
 build/
 DerivedData/
@@ -17,9 +26,6 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 Pods/
-Podfile.lock
-*.xcworkspace
-output/
 
 .DS_Store
 
@@ -48,5 +54,3 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
-
-src/Scripts/*.swiftmodule
