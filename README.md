@@ -11,7 +11,7 @@
 - Changelog: https://github.com/SDOSLabs/SDOSL10n/blob/master/CHANGELOG.md
 
 ## Introducción
-SDOSL10n es un script que genera los ficheros `.strings` a partir de un proyecto creado en la plataforma https://l10n.sdos.es. Esta plataforma permite definir los strings de un proyecto en varios idiomas y se pueden usar tanto en iOS como en Android.
+SDOSL10n es un script que genera los ficheros `.strings` a partir de un proyecto creado en la plataforma https://l10n.sdos.es o de un portal derivado de https://github.com/l10nws/l10n-app. Esta plataforma permite definir los strings de un proyecto en varios idiomas y se pueden usar tanto en iOS como en Android.
 
 ## Instalación
 
@@ -27,7 +27,7 @@ source 'https://github.com/CocoaPods/Specs.git' #Cocoapods source
 
 Añadir la dependencia al `Podfile`:
 ```ruby
-pod 'SDOSL10n', '~>1.1.0' 
+pod 'SDOSL10n', '~> 1.1.0' 
 ```
 
 ### Swift Package Manager
@@ -40,7 +40,7 @@ Esta librería la usaremos en la `Build Phase` de nuestro proyecto. El script de
 
 ``` swift
 dependencies: [
-    .package(url: "https://github.com/SDOSLabs/SDOSL10n.git", .upToNextMajor(from: "1.2.0"))
+    .package(url: "https://github.com/SDOSLabs/SDOSL10n.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 
@@ -58,14 +58,14 @@ Hay que lanzar un script durante la compilación que generará los ficheros `.st
     **Si la instalación es con cocoapods**
     ```sh
     if [ -x "$PODS_ROOT/SDOSL10n/src/Scripts/SDOSL10n" ]; then
-        "$PODS_ROOT/SDOSL10n/src/Scripts/SDOSL10n" -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings" --unlock-files
+        "$PODS_ROOT/SDOSL10n/src/Scripts/SDOSL10n" -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings"
     fi
     ```
     **Si la instalación es con Swift Package Manager**
     ```sh
     SPM_PATH="${SRCROOT}/Autogenerate"
 
-    (cd $SPM_PATH && xcrun --sdk macosx swift run SDOSL10nScript -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings" --unlock-files)
+    (cd $SPM_PATH && xcrun --sdk macosx swift run SDOSL10nScript -cloudAccesToken ${L10N_ACCESS_TOKEN} -cloudVersion ${L10N_VERSION} -cloudBundleKey ${L10N_BUNDLE_KEY} -output-directory "${SRCROOT}/main/resources/generated" -output-file-name "LocalizableGenerated.strings")
     ```
     > Los valores del script pueden cambiarse en función de las necesidades del proyecto
 5. Añadir `${TEMP_DIR}/SDOSL10n-lastrun` al apartado `Input Files`. **No poner comillas**
