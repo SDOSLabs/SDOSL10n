@@ -1,0 +1,23 @@
+PODS:
+  - SDOSL10n (1.0.5)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - SDOSL10n (from `../../`)
+  - Swinject
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Swinject
+
+EXTERNAL SOURCES:
+  SDOSL10n:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  SDOSL10n: 9ee6e999a838ac23eb15647fe23ffb1b454789bb
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: 37bab5c04dbce7481dca66a6bc7d55d633b31cf6
+
+COCOAPODS: 1.9.3

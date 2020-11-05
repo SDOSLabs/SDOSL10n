@@ -1,0 +1,15 @@
+source 'https://github.com/SDOSLabs/cocoapods-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+use_modular_headers!
+inhibit_all_warnings!
+
+def shared_pods
+	pod 'SDOSL10n', :path => '../../', :inhibit_warnings => false
+  pod 'Swinject'
+end
+
+target :AppL10n do
+	shared_pods
+end
